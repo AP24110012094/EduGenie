@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EduGenie</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎓 EduGenie</h1>
+<p>AI Learning Assistant</p>
+
+<h2>Question Answering</h2>
+<form action="/qna" method="post">
+<input type="text" name="question" placeholder="Ask a question">
+<button type="submit">Answer</button>
+</form>
+
+<h2>Explanation</h2>
+<form action="/explain" method="post">
+<input type="text" name="topic" placeholder="Enter topic">
+<button type="submit">Explain</button>
+</form>
+
+<h2>Quiz Generation</h2>
+<form action="/quiz" method="post">
+<input type="text" name="topic" placeholder="Quiz topic">
+<button type="submit">Generate Quiz</button>
+</form>
+
+<h2>Summarization</h2>
+<form action="/summary" method="post">
+<textarea name="text" rows="5" placeholder="Paste text here"></textarea>
+<button type="submit">Summarize</button>
+</form>
+
+<h2>Learning Recommendations</h2>
+<form action="/recommend" method="post">
+<input type="text" name="topic" placeholder="Learning topic">
+<button type="submit">Recommend</button>
+</form>
+
+<hr>
+
+<h2>{{ feature }}</h2>
+
+<pre>{{ result }}</pre>
+
+</div>
+
+</body>
+</html>
